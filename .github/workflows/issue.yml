@@ -2,7 +2,7 @@ name: issue to comment
 on:
   issues:
     types: [opened]
-      job:
+      jobs:
         comment-with-action:
           runs-on: ubuntu-latest
           steps:

@@ -1,6 +1,6 @@
-name: workflow of mine
+name: CI
 on:
-  push:
+  pull_request:
     branches:
       - main
   workflow_dispatch:
@@ -11,9 +11,7 @@ jobs:
       - name: Hello World
         run: echo "hello world"
         shell: bash
+jobs:
   goodbye:
     runs-on: ubuntu-latest
     steps:
-      - name: goodbye world
-        run: echo "goodbye world"
-        shell: bash

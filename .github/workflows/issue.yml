@@ -2,10 +2,10 @@ name: issue to comment
 on:
   issues:
     types: [opened]
-      jobs:
-        comment-with-action:
-          runs-on: ubuntu-latest
-          steps:
-            - name: "dump github context"
-              run: echo "${{toJson(github.event)}}" | jq
-              shell: bash
+jobs:
+  comment-with-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "dump github context"
+        run: echo "${{toJson(github.event)}}" | jq
+        shell: bash

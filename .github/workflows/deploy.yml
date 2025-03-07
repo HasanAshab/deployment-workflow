@@ -3,10 +3,17 @@ on:
   push:
     branches:
       - main
+    paths:
+      - index.html
   workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Push to pages branch
-        run: 
+        run: |
+          git add .
+          git commit -m "Index page updated"
+          git push -f origin main:pages
+

@@ -1,19 +1,12 @@
-name: workflow of mine
+name: Deploy to GH Pages
 on:
   push:
     branches:
       - main
   workflow_dispatch:
 jobs:
-  hello:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World
-        run: echo "hello world"
-        shell: bash
-  goodbye:
-    runs-on: ubuntu-latest
-    steps:
-      - name: goodbye world
-        run: echo "goodbye world"
-        shell: bash
+      - name: Push to pages branch
+        run: 

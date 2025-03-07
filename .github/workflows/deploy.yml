@@ -19,7 +19,4 @@ jobs:
 
       - name: Push to pages branch
         run: |
-          git add .
-          git commit -m "Index page updated"
-          git push -f origin main:pages
-
+          git push origin main:pages --force
